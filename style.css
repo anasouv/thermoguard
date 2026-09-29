@@ -7,3 +7,119 @@ nav{display:flex;gap:25px}nav a{color:#b8c7ca;text-decoration:none;font-size:14p
 @media(max-width:800px){nav{display:none;position:absolute;top:72px;left:0;right:0;background:#071016;padding:20px 8%;flex-direction:column}.nav-open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding-top:60px}.hero-card{margin-top:45px;width:260px;height:260px}.orb{width:165px;height:165px}.orb span{font-size:45px}.three,.dashboard,.split,.objectives{grid-template-columns:1fr}.section{padding:70px 7%}.hero h1{letter-spacing:-2px}.dash-head{align-items:start;gap:15px;flex-direction:column}.arrow{transform:rotate(90deg)}}
 
 .case-section{background:#fff7f1;max-width:none}.case-section>*{max-width:1200px;margin-left:auto;margin-right:auto}.case-grid{display:grid;grid-template-columns:.55fr 1.45fr;gap:45px;align-items:start;margin-top:35px}.case-label{padding-top:15px}.case-alert{display:inline-block;padding:7px 10px;border-radius:999px;background:#ffe0cf;color:#bd5723;font-size:11px;font-weight:900;letter-spacing:1.5px}.case-date{font-size:28px;font-weight:900;margin-top:22px;letter-spacing:-1px}.case-place{color:#75868a;margin-top:5px}.case-card{background:#fff;border:1px solid #eadbd2;border-radius:18px;padding:34px;box-shadow:0 12px 40px #9b5d3012}.case-source{color:#bd5723;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.case-card h2{font-size:clamp(28px,3.5vw,44px);margin:12px 0 18px}.case-card p{color:#5e6e72;margin-bottom:15px}.case-summary{font-size:18px;color:#25363b!important}.case-quote{border-left:3px solid #e27a37;background:#fff5ed;padding:15px 18px;margin:22px 0;color:#6c4a36;font-style:italic}.source-link{display:inline-block;color:#b95220;font-weight:900;text-decoration:none;margin-bottom:10px}.source-link:hover{text-decoration:underline}.case-note{display:block;color:#899699;font-size:11px}@media(max-width:800px){.case-grid{grid-template-columns:1fr;gap:15px}.case-card{padding:25px}.case-date{font-size:23px}}
+
+/* =========================
+   THERMOGUARD DARK THEME
+   ========================= */
+
+body {
+  background: #050b0f;
+  color: #edf8f5;
+}
+
+/* Semua section */
+.section {
+  background: #050b0f;
+  color: #edf8f5;
+}
+
+.section.alt,
+.future {
+  background: #081218;
+  color: #edf8f5;
+}
+
+/* Tajuk */
+.section h2 {
+  color: #edf8f5;
+}
+
+/* Kad */
+.card,
+.component,
+.flow-item,
+.metric {
+  background: #0c181f;
+  color: #edf8f5;
+  border-color: #1d333b;
+}
+
+.card h3,
+.component h3 {
+  color: #edf8f5;
+}
+
+.card p,
+.component p,
+.flow-item small,
+.lead {
+  color: #91a5aa;
+}
+
+/* Real Case */
+.case-section {
+  background: #071116;
+  color: #edf8f5;
+}
+
+.case-card {
+  background: #0c181f;
+  border-color: #21373f;
+  box-shadow: 0 15px 50px #0008;
+}
+
+.case-card h2,
+.case-summary {
+  color: #edf8f5 !important;
+}
+
+.case-card p {
+  color: #9aadb1;
+}
+
+.case-place,
+.case-note {
+  color: #80959a;
+}
+
+.case-quote {
+  background: #101f25;
+  border-left-color: #31e6a1;
+  color: #a9bcbe;
+}
+
+.case-alert {
+  background: #15372f;
+  color: #31e6a1;
+}
+
+.case-source,
+.source-link {
+  color: #31e6a1;
+}
+
+/* Dashboard */
+.metric {
+  box-shadow: 0 10px 35px #0004;
+}
+
+.metric small {
+  color: #8da2a7;
+}
+
+.metric strong {
+  color: #edf8f5;
+}
+
+.metric label {
+  color: #31e6a1;
+}
+
+.demo-note {
+  color: #71878c;
+}
+
+/* Footer */
+footer {
+  background: #03080b;
+}
