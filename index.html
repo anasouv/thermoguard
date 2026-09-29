@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="THERMOGUARD - Smart Vehicle Heat Monitoring & Warning System">
+  <title>THERMOGUARD | Smart Vehicle Heat Protection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="#home"><span>THERMO</span>GUARD</a>
+  <button class="menu" id="menuBtn">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#problem">Problem</a><a href="#solution">Solution</a>
+    <a href="#system">System</a><a href="#components">Components</a><a href="#dashboard">Dashboard</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <div class="badge">SMART VEHICLE SAFETY SYSTEM</div>
+    <h1>Protecting What<br><span>Matters Most.</span></h1>
+    <p>THERMOGUARD is a smart vehicle heat monitoring and warning system designed to monitor cabin temperature and activate automatic ventilation when heat reaches a critical level.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#dashboard">View Live Demo</a>
+      <a class="btn ghost" href="#solution">Explore Project ↓</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="orb"><span>35°</span><small>TRIGGER</small></div>
+    <div class="hero-status"><i></i> SYSTEM READY</div>
+  </div>
+</section>
+
+<section id="problem" class="section">
+  <div class="section-tag">01 / THE PROBLEM</div>
+  <h2>A simple moment can become a serious safety risk.</h2>
+  <p class="lead">Children can sometimes be unintentionally left inside a vehicle. In a closed vehicle exposed to hot weather, cabin temperature can rise quickly. THERMOGUARD focuses on early temperature monitoring and warning.</p>
+  <div class="cards three">
+    <article class="card"><div class="icon">☀</div><h3>Rapid Heat</h3><p>A closed vehicle can become very hot when exposed to direct sunlight and hot weather.</p></article>
+    <article class="card"><div class="icon">⚠</div><h3>Safety Risk</h3><p>High cabin temperature can create a dangerous environment, especially for children.</p></article>
+    <article class="card"><div class="icon">🔔</div><h3>Need for Warning</h3><p>An automatic warning system can help draw attention when temperature reaches a set threshold.</p></article>
+  </div>
+</section>
+
+<section id="solution" class="section dark">
+  <div class="section-tag">02 / OUR SOLUTION</div>
+  <div class="split">
+    <div><h2>Meet <span>THERMOGUARD.</span></h2><p>Instead of only displaying temperature, the system uses temperature data to trigger an action. At the selected threshold of <b>35°C</b>, the servo changes the vent position and the buzzer provides an alert.</p></div>
+    <div class="feature-list">
+      <div><b>01</b><span><strong>Monitor</strong><small>AHT20 continuously reads cabin temperature.</small></span></div>
+      <div><b>02</b><span><strong>Respond</strong><small>Raspberry Pi Pico processes the sensor data.</small></span></div>
+      <div><b>03</b><span><strong>Ventilate</strong><small>Servo automatically controls the vent position.</small></span></div>
+      <div><b>04</b><span><strong>Warn</strong><small>Buzzer and web dashboard show the system status.</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="system" class="section">
+  <div class="section-tag">03 / HOW IT WORKS</div>
+  <h2>From temperature to action.</h2>
+  <div class="flow">
+    <div class="flow-item"><span>01</span><strong>AHT20</strong><small>Reads temperature</small></div>
+    <div class="arrow">→</div>
+    <div class="flow-item"><span>02</span><strong>PICO</strong><small>Processes data</small></div>
+    <div class="arrow">→</div>
+    <div class="flow-item"><span>03</span><strong>SERVO</strong><small>Controls vent</small></div>
+    <div class="arrow">→</div>
+    <div class="flow-item"><span>04</span><strong>ALERT</strong><small>Buzzer warning</small></div>
+    <div class="arrow">→</div>
+    <div class="flow-item"><span>05</span><strong>ESP-01S</strong><small>Web monitoring</small></div>
+  </div>
+</section>
+
+<section id="components" class="section alt">
+  <div class="section-tag">04 / COMPONENTS</div>
+  <h2>The technology behind THERMOGUARD.</h2>
+  <div class="cards three">
+    <article class="component"><span class="num">01</span><h3>Raspberry Pi Pico</h3><p>Main controller that reads sensors and controls the outputs.</p></article>
+    <article class="component"><span class="num">02</span><h3>AHT20</h3><p>Digital temperature sensor used to measure cabin temperature.</p></article>
+    <article class="component"><span class="num">03</span><h3>Servo Motor</h3><p>Moves the ventilation mechanism according to system conditions.</p></article>
+    <article class="component"><span class="num">04</span><h3>IR Sensor</h3><p>Detects objects or presence in the selected monitoring area.</p></article>
+    <article class="component"><span class="num">05</span><h3>Buzzer</h3><p>Provides an audible warning when an alert condition occurs.</p></article>
+    <article class="component"><span class="num">06</span><h3>ESP-01S</h3><p>Provides local Wi-Fi communication for the web dashboard.</p></article>
+  </div>
+</section>
+
+<section id="dashboard" class="section">
+  <div class="section-tag">05 / SYSTEM DASHBOARD</div>
+  <div class="dash-head"><div><h2>Live System Monitor</h2><p>Demo dashboard — values can later be connected to your Pico + ESP-01S.</p></div><div class="online"><i></i> ONLINE</div></div>
+  <div class="dashboard">
+    <div class="metric temp"><small>TEMPERATURE</small><strong id="temp">34.2<span>°C</span></strong><label id="tempState">NORMAL</label></div>
+    <div class="metric"><small>VENT</small><strong id="vent">CLOSED</strong><label id="ventState">NORMAL POSITION</label></div>
+    <div class="metric"><small>IR SENSOR</small><strong id="ir">NORMAL</strong><label>MONITORING</label></div>
+    <div class="metric"><small>BUZZER</small><strong id="buzzer">OFF</strong><label>STANDBY</label></div>
+  </div>
+  <div class="demo-controls">
+    <button class="btn primary" id="heatBtn">Simulate Heat ↑</button>
+    <button class="btn ghost" id="resetBtn">Reset Demo</button>
+  </div>
+  <p class="demo-note">Demo mode is for website presentation. It does not directly control the physical prototype.</p>
+</section>
+
+<section class="section dark">
+  <div class="center">
+    <div class="section-tag">06 / OBJECTIVES</div>
+    <h2>Designed for early awareness.</h2>
+    <div class="objectives">
+      <div><span>01</span>Monitor vehicle cabin temperature automatically.</div>
+      <div><span>02</span>Activate ventilation when temperature reaches the selected threshold.</div>
+      <div><span>03</span>Provide an audible and visual warning.</div>
+      <div><span>04</span>Enable wireless monitoring through a web dashboard.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section future">
+  <div class="section-tag">07 / FUTURE DEVELOPMENT</div>
+  <h2>What's next?</h2>
+  <div class="cards three">
+    <article class="card"><h3>Presence Detection</h3><p>Improve the system with dedicated occupant/child-presence sensing.</p></article>
+    <article class="card"><h3>Mobile Notification</h3><p>Send alerts to a parent's phone when a critical condition is detected.</p></article>
+    <article class="card"><h3>Vehicle Integration</h3><p>Develop a more advanced prototype suitable for real vehicle integration.</p></article>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="logo"><span>THERMO</span>GUARD</div>
+  <p>Smart Vehicle Heat Monitoring & Warning System</p>
+  <p class="copy">© 2026 THERMOGUARD Project</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
